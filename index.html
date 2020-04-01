@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 id = "username" class="user-info__name"></h1>
+          <p id = "job" class="user-info__job"></p>
+          <button class="user-info__edit">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+
+
+
+
+    </div>
+    <div class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" name="name" required  minlength="1" maxlength="30"  class="popup__input popup__input_type_name" placeholder="Название">
+          <span id="error-name" class="error-message"></span>
+            <input type="text" name="link" required  pattern="(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+          <span id="error-link" class="error-message"></span>
+            <button id="add" type disabled class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="edit" class="popup">
+      <div class="popup__content">
+        <img id="edit__close" src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit">
+          <input type="text" name="username" required minlength="1" maxlength="30" class="popup__input" placeholder="Имя">
+          <span id="error-username" class="error-message"></span>
+          <input type="text" name="job" required minlength="1" maxlength="30" class="popup__input" placeholder="О себе" >
+          <span id="error-job" class="error-message"></span>
+          <button id="edit__button" class="button popup__button popup__button_type_save popup__button_active">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div id="picture" class="popup">
+      <div class="popup__content_img">
+        <img id="picture__close" src="./images/close.svg" alt="" class="popup__close">
+      <img src="" class="popup__image">
+      </div>
+    </div>
+
+    </div>
+
+
+  </div>
+</body>
+<script src="js/Api.js"></script>
+<script src="js/Card.js"></script>
+<script src="js/CardList.js"></script>
+<script src="js/UserInfo.js"></script>
+<script src="js/Popup.js"></script>
+<script src="js/PicPopup.js"></script>
+<script src="js/FormValidator.js"></script>
+<script src="js/EditFormValidator.js"></script>
+<script src="js/AddFormValidator.js"></script>
+<script src="js/script.js"></script>
+</html>
